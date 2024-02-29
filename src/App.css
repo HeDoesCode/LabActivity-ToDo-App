@@ -1,0 +1,37 @@
+* {
+  color: #fff !important;
+}
+
+body {
+  background-color: #393646 !important;
+}
+
+.card {
+  background-color: #4f4557 !important;
+}
+
+form input[type="text"],
+select,
+option {
+  color: #393646 !important;
+}
+
+.btn-primary {
+  background-color: #fff !important;
+  color: #393646 !important;
+  border: none !important;
+}
+
+.btn-primary:hover {
+  background-color: #bbbbbb !important;
+}
+
+.btn-danger {
+  background-color: #ff6961 !important;
+  border: none !important;
+}
+
+.btn-danger:hover {
+  background-color: #e0564f !important;
+  border: none !important;
+}
