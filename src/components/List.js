@@ -1,13 +1,12 @@
 import ListItem from "./ListItem";
-import data from "../data";
 
-function List() {
-  const tasks = data();
+function List({ onUpdate, tasks }) {
+  const taskList = tasks;
 
   return (
     <ul className="list-unstyled container p-0">
-      {tasks.map((task) => (
-        <ListItem taskObj={task} key={task.id} />
+      {taskList.map((task) => (
+        <ListItem taskObj={task} onUpdate={onUpdate} key={task.id} />
       ))}
     </ul>
   );

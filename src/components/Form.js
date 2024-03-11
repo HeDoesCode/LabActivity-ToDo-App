@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Form() {
+function Form({ onAddTask }) {
   const [name, setName] = useState("");
   const [quantity, setQuantity] = useState(1);
 
@@ -8,7 +8,10 @@ function Form() {
     e.preventDefault();
     if (!name) return;
     const newTask = { name, quantity, completion: false, id: Date.now() }; // data from form
-    console.log(newTask);
+    // console.log(newTask);
+    setName("");
+    setQuantity(1);
+    onAddTask(newTask);
   }
 
   return (
