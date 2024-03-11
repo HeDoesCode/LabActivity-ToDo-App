@@ -35,3 +35,12 @@ option {
   background-color: #e0564f !important;
   border: none !important;
 }
+
+/* For completed list items */
+.completed {
+  background-color: #198754 !important;
+}
+
+.completed {
+  color: black !important;
+}
