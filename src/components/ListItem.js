@@ -8,7 +8,7 @@ function ListItem({ onUpdate, onDelete, taskObj }) {
           </h5>
           {taskObj.completion ? (
             <button
-              className="btn btn-primary"
+              className="col-lg-2 btn btn-primary"
               onClick={() => onUpdate(taskObj.id)}
             >
               <i className="bi bi-arrow-counterclockwise"></i> Undo

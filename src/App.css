@@ -41,6 +41,6 @@ option {
   background-color: #198754 !important;
 }
 
-.completed {
+.completed button > i {
   color: black !important;
 }
