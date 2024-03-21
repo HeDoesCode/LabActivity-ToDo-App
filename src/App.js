@@ -5,6 +5,7 @@ import { useState } from "react";
 import Header from "./components/Header";
 import Form from "./components/Form";
 import List from "./components/List";
+import Footer from "./components/Footer";
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -25,9 +26,16 @@ function App() {
     if (window.confirm("Are you sure you want to delete this task?")) {
       setTasks((tasks) => tasks.filter((task) => task.id != id));
     }
-
     return;
   }
+
+  function handleClearAll() {
+    if (window.confirm("Are you sure you want to clear the list?")) {
+      setTasks([]);
+    }
+    return;
+  }
+
   return (
     <div className="container text-center py-5">
       <Header />
@@ -37,6 +45,10 @@ function App() {
         onUpdate={handleUpdateTask}
         onDelete={handleDeleteTask}
       />
+      <button className="btn btn-primary mb-2" onClick={handleClearAll}>
+        Clear
+      </button>
+      <Footer tasks={tasks} />
     </div>
   );
 }
