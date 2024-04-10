@@ -7,8 +7,13 @@ function Form({ onAddTask }) {
   function handleSubmit(e) {
     e.preventDefault();
     if (!name) return;
-    const newTask = { name, quantity, completion: false, id: Date.now() }; // data from form
-    // console.log(newTask);
+    const newTask = {
+      name,
+      quantity,
+      completion: false,
+      isEditable: false,
+      id: Date.now(),
+    };
     setName("");
     setQuantity(1);
     onAddTask(newTask);
